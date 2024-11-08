@@ -1,0 +1,37 @@
+<div class="min-h-full h-screen overflow-hidden">
+  <div class="flex w-full h-full">
+    <div class="h-full" *ngIf="display !== 'MOBILE' && display !== 'TABLET'">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="flex-1 flex flex-col h-full">
+      <app-navbar
+        *ngIf="display === 'MOBILE' || display === 'TABLET'"
+      ></app-navbar>
+
+      <header class="bg-white shadow">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+            {{ titleService.getTitle() }}
+          </h1>
+        </div>
+      </header>
+
+      <main class="flex-1 overflow-y-auto">
+        <div
+          *ngIf="loading"
+          class="flex items-center justify-center bg-white opacity-50 z-[9999] w-full h-full absolute top-0 left-0"
+        >
+          <app-loader></app-loader>
+        </div>
+
+        <div
+          class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8"
+          style="min-height: 680px"
+        >
+          <router-outlet></router-outlet>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>

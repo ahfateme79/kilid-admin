@@ -1,0 +1,23 @@
+<div class="h-full inset-0 overflow-hidden">
+    <div
+      class="pointer-events-none h-full inset-y-0 left-0 flex max-w-full"
+    >
+      <div class="pointer-events-auto relative w-screen max-w-md">
+        <div class="flex h-full bg-gray-800 flex-col py-6 shadow-xl">
+          <div class="relative mt-6 flex-1 px-4 sm:px-6">
+            <ul class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+              <li
+                *ngFor="let item of navbarItems"
+                [routerLink]="item.route"
+                class="rounded-md cursor-pointer flex gap-3 items-center my-3 bg-gray-900 px-3 py-3 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+                [routerLinkActive]="['bg-gray-900']"
+              >
+                <i class="fa-solid text-white" [ngClass]="item.icon"></i>
+                {{ item.name }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

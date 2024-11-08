@@ -1,0 +1,4 @@
+::ng-deep .cdk-global-overlay-wrapper:has(>div.snackbar) {
+    @apply !items-center;
+    background: color-mix(in srgb, var(--grey1) 5%, transparent);
+}

@@ -1,0 +1,36 @@
+
+# Project Documentation: Angular Admin Panel
+
+## 1. Project Overview
+This project is a responsive Angular admin panel built with Angular 17, Angular Material, Tailwind CSS, and Fake Store API. 
+It includes a dashboard and user management features.
+
+## 2. Setup
+- Clone the project and navigate to the directory.
+- Install dependencies: `npm install`
+- Run the application: `ng serve` and access at `http://localhost:4200`.
+
+## 3. Structure
+- **Main Project (admin-panel)**: Contains main application components and routes.
+- **Library (user-form-library)**: Shared reusable components, especially for user forms.
+
+## 4. Key Features
+1. **User List**: Paginated table showing users with edit/delete actions.
+2. **Reusable User Form**: For creating/editing users; includes validation.
+3. **Dashboard**: Displays total and active users.
+4. **CRUD Operations**: Create, update, and delete users via API.
+5. **Loading Spinner**: Shows during HTTP requests.
+
+## 5. API Integration
+- Uses Fake Store API at `https://fakestoreapi.com` for user data.
+- CRUD functionality for user management with loader indication.
+
+## 6. Style and UI
+- Angular Material for UI components.
+- Tailwind CSS for responsive, custom styling.
+
+## 7. Testing and Future Enhancements
+- Unit tests for form validation and API calls.
+
+## 8. Conclusion
+This Angular admin panel provides a modular and scalable foundation for managing users and integrating API data with effective UI/UX.

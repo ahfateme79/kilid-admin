@@ -1,0 +1,49 @@
+<form [formGroup]="formGroup">
+  <div class="flex flex-col">
+    <div class="flex gap-6">
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input
+          id="firstName"
+          matInput
+          required
+          formControlName="firstName"
+          maxlength="50"
+        />
+        <mat-error *ngIf="formGroup.get('firstName')?.hasError('required')">
+          First Name is required.
+        </mat-error>
+        <mat-error *ngIf="formGroup.get('firstName')?.hasError('maxlength')">
+          First Name cannot exceed 50 characters.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput required formControlName="lastName" maxlength="50" />
+        <mat-error *ngIf="formGroup.get('lastName')?.hasError('required')">
+          Last Name is required.
+        </mat-error>
+        <mat-error *ngIf="formGroup.get('lastName')?.hasError('maxlength')">
+          Last Name cannot exceed 50 characters.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="flex gap-6">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput required formControlName="email" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Role</mat-label>
+        <mat-select required formControlName="role">
+          <mat-option *ngFor="let role of roles" [value]="role">
+            {{ role }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <mat-slide-toggle required formControlName="activate">
+      {{ statusText }}</mat-slide-toggle
+    >
+  </div>
+</form>

@@ -1,0 +1,32 @@
+<div
+  fxLayout="row"
+  class="snack-container p-3 flex flex-col"
+  [ngClass]="
+    data?.button && data?.button === 'dismiss' ? 'justify-end items-end' : ''
+  "
+  [ngStyle]="getStyles()"
+>
+  <div></div>
+  <div class="flex gap-4 items-start">
+    <div>
+      <p class="font-bold text-sm capitalize" [ngClass]="{'text-green-500':data.snackType==='success',
+        'text-red-600':data.snackType==='error',
+        'text-yellow-600':data.snackType==='warning'
+      }">
+        <ng-container>
+          {{ data.snackType }}
+          Message
+        </ng-container>
+      </p>
+      <p class="text-black font-medium text-sm mt-3">{{ data.message }}</p>
+    </div>
+  </div>
+  <button
+    class="p-1 px-3 !bg-[--light] !rounded-md w-fit text-[--text] mt-2 opacity-90"
+    *ngIf="data?.button === 'dismiss'"
+    mat-icon-button
+    (click)="sbRef.dismiss()"
+  >
+    Got it
+  </button>
+</div>

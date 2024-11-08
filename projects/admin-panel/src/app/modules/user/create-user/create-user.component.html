@@ -1,0 +1,10 @@
+<form [formGroup]="createUserForm" (ngSubmit)="onFormSubmit(createUserForm)">
+    <h2 mat-dialog-title>Create User</h2>
+    <mat-dialog-content>
+      <app-user-form [formGroup]="createUserForm" [roles]="userRoles"></app-user-form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-flat-button type="submit" [disabled]="createUserForm.invalid">Save</button>
+    </mat-dialog-actions>
+  </form>
+  
