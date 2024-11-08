@@ -1,4 +1,4 @@
-<form [formGroup]="editUserForm" (ngSubmit)="onFormSubmit(editUserForm)">
+<form class="md:w-[450px]" [formGroup]="editUserForm" (ngSubmit)="onFormSubmit(editUserForm)">
     <h2 mat-dialog-title>Edit User</h2>
     <mat-dialog-content>
       <app-user-form [formGroup]="editUserForm" [roles]="userRoles"></app-user-form>

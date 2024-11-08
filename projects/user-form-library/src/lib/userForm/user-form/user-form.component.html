@@ -1,6 +1,6 @@
 <form [formGroup]="formGroup">
   <div class="flex flex-col">
-    <div class="flex gap-6">
+    <div class="grid grid-cols-1">
       <mat-form-field>
         <mat-label>First Name</mat-label>
         <input
@@ -28,7 +28,7 @@
         </mat-error>
       </mat-form-field>
     </div>
-    <div class="flex gap-6">
+    <div class="grid grid-cols-1">
       <mat-form-field>
         <mat-label>Email</mat-label>
         <input matInput required formControlName="email" />

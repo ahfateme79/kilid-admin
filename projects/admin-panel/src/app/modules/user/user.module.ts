@@ -10,7 +10,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RemoveConfirmationModalComponent } from './remove-confirmation-modal/remove-confirmation-modal.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CreateUserFormComponent } from './create-user/create-user.component';
@@ -18,7 +18,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { EditUserComponent } from './edit-user/edit-user.component';
-import { UserFormComponent } from '../../../../../user-form-library/src/lib/userForm/user-form/user-form.component';
 import { UserFormModule } from '../../../../../user-form-library/src/public-api';
 
 const routes: Routes = [
@@ -49,7 +48,6 @@ const routes: Routes = [
     MatDialogModule,
     MatPaginator,
     MatPaginatorModule,
-    MatSort,
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
