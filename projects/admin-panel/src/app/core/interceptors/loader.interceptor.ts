@@ -14,20 +14,11 @@ export class LoaderInterceptor implements HttpInterceptor {
   constructor(private loaderService: LoaderService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const shouldShowLoader =
-      !req.url.includes('/address') &&
-      !req.body?.coupon_code &&
-      !req.url.includes('/notifications');
-
-    if (shouldShowLoader) {
-      this.loaderService.setLoading('http', true);
-    }
+    this.loaderService.setLoading('http', true);
 
     return next.handle(req).pipe(
       finalize(() => {
-        if (shouldShowLoader) {
-          this.loaderService.setLoading('http', false);
-        }
+        this.loaderService.setLoading('http', false);
       })
     );
   }
