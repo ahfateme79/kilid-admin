@@ -2,7 +2,7 @@
 # Project Documentation: Angular Admin Panel
 
 ## 1. Project Overview
-This project is a responsive Angular admin panel built with Angular 17, Angular Material, Tailwind CSS, and Fake Store API. 
+This project is a responsive Angular admin panel built with Angular 18, Angular Material, Tailwind CSS, and Fake Store API. 
 It includes a dashboard and user management features.
 
 ## 2. Setup
